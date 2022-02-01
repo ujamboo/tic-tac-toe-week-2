@@ -21,5 +21,10 @@ def hello():
             player2 = input("O's turn to choose")
             player += 1
             learning()
-learning()  
-hello()
+
+
+def main():
+    learning()
+    hello()
+
+main()

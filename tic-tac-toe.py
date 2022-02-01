@@ -14,12 +14,32 @@ def hello():
     player = 0
     while keep_playing == True:
         if player % 2 == 0:
-            player1 = input("X's turn to choose")
+            player1 = int(input("X's turn to choose "))
+            for num in row1:
+                if num == player1:
+                    num = "x"
+            for num in row2: 
+                if num == player1:
+                    num = "x"
+            for num in row3:
+                if num == player1:
+                    num = "x"
+        
             player += 1
             learning()
         elif player % 2 == 1:
-            player2 = input("O's turn to choose")
-            player += 1
+            player2 = input("O's turn to choose ")
+            for num in row1:
+                if num == player2:
+                    num = "o"
+            for num in row2:
+                if num == player2:
+                    num = "o"
+            for num in row3:
+                if num == player2:
+                    num = "o"
+
+            player += 1       
             learning()
 
 
@@ -28,3 +48,6 @@ def main():
     hello()
 
 main()
+
+def next_step():
+    pass
